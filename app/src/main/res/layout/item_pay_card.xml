@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvPayCardNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/activity_vertical_margin_small_8dp"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin_small_8dp"
+            android:text="卡号 6234 **** **** 3456"
+            android:textColor="@color/T1"
+            android:textSize="@dimen/navigation_title_20sp" />
+
+        <TextView
+            android:id="@+id/tvPayCardRemain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/activity_vertical_margin_small_8dp"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:text="余额 258.00元"
+            android:textColor="@color/T2"
+            android:textSize="@dimen/big_content_16sp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:src="@mipmap/pay_icon_select"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:button="@null"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:textSize="@dimen/big_content_16sp" />
+
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!--文本色-->
+    <color name="T1">#393939</color>
+    <!--辅助文本/操作icon色-->
+    <color name="T2">#909090</color>
+</resources>
