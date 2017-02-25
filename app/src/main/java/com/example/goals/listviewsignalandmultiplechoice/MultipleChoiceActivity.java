@@ -6,6 +6,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.BaseAdapter;
 import android.widget.CheckedTextView;
 import android.widget.ImageView;
@@ -41,8 +43,10 @@ public class MultipleChoiceActivity extends AppCompatActivity {
     public class MultiplePayCardAdapter extends BaseAdapter {
         private final String TAG = SignalChoiceActivity.PayCardAdapter.class.getName();
         int selectedIndex;
+        private Animation animation;
 
         public MultiplePayCardAdapter() {
+            animation = AnimationUtils.loadAnimation(MultipleChoiceActivity.this, R.anim.bottom_in_anim);
             selectedIndex = -1;
         }
 
@@ -130,6 +134,7 @@ public class MultipleChoiceActivity extends AppCompatActivity {
                 holder.imageView.setVisibility(View.INVISIBLE);
             }
 
+            view.startAnimation(animation);
 
             return view;
         }

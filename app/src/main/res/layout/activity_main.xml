@@ -8,6 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
     tools:context="com.example.goals.listviewsignalandmultiplechoice.MainActivity">
 
     <Button
@@ -21,4 +22,10 @@
         android:layout_height="wrap_content"
         android:onClick="multipleChoice"
         android:text="listView多选" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="googleCardsView"
+        android:text="Google Cards View" />
 </LinearLayout>

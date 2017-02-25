@@ -24,4 +24,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this, MultipleChoiceActivity.class));
 
     }
+
+    public void googleCardsView(View view) {
+        startActivity(new Intent(this, GoogleCardsActivity.class));
+    }
 }
