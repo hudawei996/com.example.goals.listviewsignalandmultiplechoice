@@ -4,12 +4,13 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
     tools:context="com.example.goals.listviewsignalandmultiplechoice.MainActivity">
+
+    <View
+        android:id="@+id/popupWinParent"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -18,14 +19,36 @@
         android:text="listView单选" />
 
     <Button
+        android:id="@+id/btnListMultipleChoice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="multipleChoice"
         android:text="listView多选" />
 
     <Button
+        android:id="@+id/btnGoogleCards"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="googleCardsView"
-        android:text="Google Cards View" />
+        android:text="Google Cards View"
+        android:transitionName="shareNames" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="topPopupWin"
+        android:text="顶部弹出框" />
+
+    <ImageView
+        android:id="@+id/ivAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:src="@mipmap/iv_add" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="gotoFrameLayout"
+        android:text="frameLayout测试双层布局点击效果的影响" />
 </LinearLayout>

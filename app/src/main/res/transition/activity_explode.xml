@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="300" /><!--错误的根，直接写explode就行
+<transitionManager xmlns:android="http://schemas.android.com/apk/res/android">
+
+</transitionManager>-->
+
+
+<!--多种样式-->
+<!--从底部滑上来-->
+<!--<slide xmlns:android="http://schemas.android.com/apk/res/android"
+android:duration="300" />-->
+
+<!--重新上色-->
+<!--<recolor xmlns:android="http://schemas.android.com/apk/res/android"
+android:duration="300" />-->
+
+<!--渐变式-->
+<!--
+<fade xmlns:android="http://schemas.android.com/apk/res/android"
+android:duration="300" />-->
+
+<!--爆炸式-->
+<!--<explode xmlns:android="http://schemas.android.com/apk/res/android"
+android:duration="300" />-->

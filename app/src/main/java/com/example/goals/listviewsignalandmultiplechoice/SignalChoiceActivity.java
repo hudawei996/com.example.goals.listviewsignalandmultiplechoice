@@ -1,11 +1,16 @@
 package com.example.goals.listviewsignalandmultiplechoice;
 
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.transition.Transition;
+import android.transition.TransitionInflater;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -16,11 +21,11 @@ public class SignalChoiceActivity extends AppCompatActivity {
 
     public PayCardAdapter payCardAdapter;
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signal_choice);
-
 
         lvSingle = (ListView) findViewById(R.id.lvSingle);
 

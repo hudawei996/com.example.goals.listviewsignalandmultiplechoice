@@ -6,6 +6,17 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+    <style name="AppTheme1" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:windowEnterTransition">@transition/activity_explode</item>
+        <item name="android:windowExitTransition">@transition/activity_explode</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -39,6 +50,13 @@
         <!-- <item name="android:paddingBottom">8dp</item> -->
         <item name="android:paddingRight">4dp</item>
         <item name="android:cropToPadding">true</item>
+    </style>
+
+
+    <!--弹出框显示和隐藏动画-->
+    <style name="popupAnim" parent="@android:style/Animation.Activity">
+        <item name="android:windowEnterAnimation">@anim/anim_show_popupwin</item>
+        <item name="android:windowExitAnimation">@anim/anim_dismiss_popupwin</item>
     </style>
 
 </resources>

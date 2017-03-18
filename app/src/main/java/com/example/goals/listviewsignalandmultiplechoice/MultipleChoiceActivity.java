@@ -1,11 +1,16 @@
 package com.example.goals.listviewsignalandmultiplechoice;
 
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.transition.Transition;
+import android.transition.TransitionInflater;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.BaseAdapter;
@@ -28,9 +33,18 @@ public class MultipleChoiceActivity extends AppCompatActivity {
 
     public HashMap<String, String> hashMap;
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // 设置contentFeature,可使用切换动画
+        getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
+        Transition explode = TransitionInflater.from(this).inflateTransition(android.R.transition.explode);
+        getWindow().setEnterTransition(explode);
+        Transition slide_top = TransitionInflater.from(this).inflateTransition(android.R.transition.slide_top);
+        getWindow().setExitTransition(slide_top);
+
         setContentView(R.layout.activity_multiple_choice);
 
         lvMultiple = (ListView) findViewById(R.id.lvMultiple);

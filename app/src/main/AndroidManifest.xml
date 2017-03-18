@@ -19,9 +19,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignalChoiceActivity" />
+        <activity
+            android:name=".SignalChoiceActivity"
+            android:theme="@style/AppTheme1" />
         <activity android:name=".MultipleChoiceActivity" />
         <activity android:name=".GoogleCardsActivity" />
+        <activity android:name=".FrameLayoutActivity"></activity>
     </application>
 
 </manifest>
