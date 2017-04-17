@@ -1,30 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.goals.listviewsignalandmultiplechoice">
+          package="com.example.goals.listviewsignalandmultiplechoice">
 
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:name=".MainApplication"
         android:allowBackup="true"
+        android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
+        <!-- android:taskAffinity=".affinityActivity.ThirdActivity"写在目标activity中 -->
+        <!--<activity
+            android:name=".LaunchActivity"
+            android:label="@string/title_activity_launch"
+            android:launchMode="singleInstance"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+
+            &lt;!&ndash;用于过滤浏览器过来的消息，用浏览器打开APP&ndash;&gt;
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data
+                    android:host="jap.alibaba.com"
+                    android:scheme="jap"/>
+            </intent-filter>
+        </activity>-->
+
+        <activity
+            android:name=".MainActivity"
+            android:taskAffinity=".affinityActivity.ThirdActivity"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+
+            <!--用于过滤浏览器过来的消息，用浏览器打开APP-->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data
+                    android:host="jap.alibaba.com"
+                    android:scheme="jap"/>
             </intent-filter>
         </activity>
+
         <activity
             android:name=".SignalChoiceActivity"
-            android:theme="@style/AppTheme1" />
-        <activity android:name=".MultipleChoiceActivity" />
-        <activity android:name=".GoogleCardsActivity" />
-        <activity android:name=".FrameLayoutActivity"></activity>
+            android:theme="@style/AppTheme1"/>
+
+        <activity android:name=".MultipleChoiceActivity"/>
+
+        <activity android:name=".GoogleCardsActivity"/>
+
+        <activity android:name=".FrameLayoutActivity"/>
+
+        <activity android:name=".affinityActivity.FirstActivity">
+        </activity>
+        <activity android:name=".affinityActivity.SecondActivity">
+        </activity>
+        <activity android:name=".affinityActivity.ThirdActivity">
+        </activity>
     </application>
 
 </manifest>

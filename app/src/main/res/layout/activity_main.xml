@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.example.goals.listviewsignalandmultiplechoice.MainActivity">
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/activity_main"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context="com.example.goals.listviewsignalandmultiplechoice.MainActivity">
 
     <View
         android:id="@+id/popupWinParent"
         android:layout_width="match_parent"
-        android:layout_height="0.5dp" />
+        android:layout_height="0.5dp"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="signalChoice"
-        android:text="listView单选" />
+        android:text="listView单选"/>
 
     <Button
         android:id="@+id/btnListMultipleChoice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="multipleChoice"
-        android:text="listView多选" />
+        android:text="listView多选"/>
 
     <Button
         android:id="@+id/btnGoogleCards"
@@ -31,24 +31,50 @@
         android:layout_height="wrap_content"
         android:onClick="googleCardsView"
         android:text="Google Cards View"
-        android:transitionName="shareNames" />
+        android:transitionName="shareNames"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="topPopupWin"
-        android:text="顶部弹出框" />
+        android:text="顶部弹出框"/>
 
     <ImageView
         android:id="@+id/ivAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="16dp"
-        android:src="@mipmap/iv_add" />
+        android:src="@mipmap/iv_add"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="gotoFrameLayout"
-        android:text="frameLayout测试双层布局点击效果的影响" />
+        android:text="frameLayout测试双层布局点击效果的影响"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="finishAffinityTest"
+        android:text="finishAffinity测试"/>
+
+    <Button
+        android:id="@+id/get"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_vertical_margin_small_8dp"
+        android:background="#00ffff"
+        android:text="get"/>
+
+    <Button
+        android:id="@+id/post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00ffff"
+        android:text="post"/>
+
+    <TextView
+        android:id="@+id/tvEventBus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 </LinearLayout>

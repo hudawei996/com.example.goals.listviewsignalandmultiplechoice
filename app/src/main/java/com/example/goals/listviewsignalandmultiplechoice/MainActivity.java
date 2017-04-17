@@ -2,10 +2,13 @@ package com.example.goals.listviewsignalandmultiplechoice;
 
 import android.app.ActivityOptions;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,21 +18,45 @@ import android.view.animation.RotateAnimation;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.PopupWindow;
+import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+import com.example.goals.listviewsignalandmultiplechoice.affinityActivity.FirstActivity;
+import com.example.goals.listviewsignalandmultiplechoice.util.GetPostUtil;
+
+import de.greenrobot.event.EventBus;
+import de.greenrobot.event.Subscribe;
+import de.greenrobot.event.ThreadMode;
+
+public class MainActivity extends BaseActivity {
 
     private Button btnListMultipleChoice;
     private Button btnGoogleCards;
     private PopupWindow popupWindow;
     private View popupWinParent;
     private ImageView imageView;
+    private Button get, post;
+    private TextView tvEventBus;
+
+
+    private String response;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        EventBus.getDefault().register(this);
+
+        initView();
+
+        // 获得从URL过来的参数
+        getURLData();
+
+        initURLTestButton();
+    }
+
+    private void initView() {
         btnListMultipleChoice = (Button) findViewById(R.id.btnListMultipleChoice);
         btnGoogleCards = (Button) findViewById(R.id.btnGoogleCards);
         popupWinParent = findViewById(R.id.popupWinParent);
@@ -48,8 +75,58 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+        tvEventBus = (TextView) findViewById(R.id.tvEventBus);
+    }
 
+    private void initURLTestButton() {
 
+        get = (Button) this.findViewById(R.id.get);
+        post = (Button) this.findViewById(R.id.post);
+
+        get.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                // TODO Auto-generated method stub
+                new Thread() {
+                    @Override
+                    public void run() {
+                        response = GetPostUtil.sendGet("http://www.jju.edu.cn/", null);
+                        Log.i("response", response);
+                    }
+                }.start();
+            }
+        });
+
+        post.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                // TODO Auto-generated method stub
+                new Thread() {
+                    @Override
+                    public void run() {
+                        response = GetPostUtil.sendPost("http://www.jju.edu.cn/", null);
+//                      Log.i("response", response);
+                    }
+                }.start();
+            }
+        });
+    }
+
+    /**
+     * 获得从URL过来的参数
+     */
+    private void getURLData() {
+        Intent intent = getIntent();
+        Uri uri = intent.getData();
+        if (uri != null) {
+            String articleId = "Artical ID =" + uri.getQueryParameter("article");
+            /*另外还有以下几个API来获取相关信息：
+            getIntent().getScheme(); //获得Scheme名称
+            getIntent().getDataString(); //获得Uri全部路径
+            getIntent().getHost(); //获得host
+            */
+            Toast.makeText(this, "URL传递过来的参数是" + articleId, Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void signalChoice(View view) {
@@ -123,5 +200,27 @@ public class MainActivity extends AppCompatActivity {
      */
     public void gotoFrameLayout(View view) {
         startActivity(new Intent(this, FrameLayoutActivity.class));
+    }
+
+    public void finishAffinityTest(View view) {
+        startActivity(new Intent(this, FirstActivity.class));
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        EventBus.getDefault().unregister(this);
+    }
+
+    /**
+     * 订阅eventBus事件
+     * 用一个详细的类型来区分事件，否则是string类型的消息不能区分，只能一一去匹配
+     * 建议定义的类型：{eventCode：XXX，message：XXX}
+     * @param message
+     */
+    @Subscribe(threadMode = ThreadMode.MainThread)
+    public void helloEventBus(String message){
+        tvEventBus.setText(message);
     }
 }
