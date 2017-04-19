@@ -262,4 +262,8 @@ public class MainActivity extends BaseActivity {
     public void gotoNotifyLayoutChange(View view) {
         startActivity(new Intent(this,NotifyPageChangeActivity.class));
     }
+
+    public void gotoMagicEditText(View view) {
+        startActivity(new Intent(this,EditTextMagicEffect.class));
+    }
 }

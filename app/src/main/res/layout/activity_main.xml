@@ -100,6 +100,12 @@
                 android:onClick="gotoNotifyLayoutChange"
                 android:text="页面通知更新的四种方法"/>
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="gotoMagicEditText"
+                android:text="输入框特效"/>
+
 
         </LinearLayout>
 

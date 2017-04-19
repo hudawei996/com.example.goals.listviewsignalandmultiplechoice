@@ -79,6 +79,8 @@
         </activity>
         <activity android:name=".NotifyPageChangeActivity">
         </activity>
+        <activity android:name=".EditTextMagicEffect">
+        </activity>
     </application>
 
 </manifest>
