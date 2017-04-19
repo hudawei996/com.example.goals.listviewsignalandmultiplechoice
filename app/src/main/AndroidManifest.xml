@@ -15,7 +15,8 @@
         android:theme="@style/AppTheme">
 
         <!-- android:taskAffinity=".affinityActivity.ThirdActivity"写在目标activity中 -->
-        <!--<activity
+        <!--
+        <activity
             android:name=".LaunchActivity"
             android:label="@string/title_activity_launch"
             android:launchMode="singleInstance"
@@ -37,7 +38,8 @@
                     android:host="jap.alibaba.com"
                     android:scheme="jap"/>
             </intent-filter>
-        </activity>-->
+        </activity>
+        -->
 
         <activity
             android:name=".MainActivity"
@@ -49,7 +51,7 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
 
-            <!--用于过滤浏览器过来的消息，用浏览器打开APP-->
+            <!-- 用于过滤浏览器过来的消息，用浏览器打开APP -->
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
 
@@ -61,22 +63,21 @@
                     android:scheme="jap"/>
             </intent-filter>
         </activity>
-
         <activity
             android:name=".SignalChoiceActivity"
             android:theme="@style/AppTheme1"/>
-
         <activity android:name=".MultipleChoiceActivity"/>
-
         <activity android:name=".GoogleCardsActivity"/>
-
         <activity android:name=".FrameLayoutActivity"/>
-
         <activity android:name=".affinityActivity.FirstActivity">
         </activity>
         <activity android:name=".affinityActivity.SecondActivity">
         </activity>
         <activity android:name=".affinityActivity.ThirdActivity">
+        </activity>
+        <activity android:name=".RxBusTestActivity">
+        </activity>
+        <activity android:name=".NotifyPageChangeActivity">
         </activity>
     </application>
 

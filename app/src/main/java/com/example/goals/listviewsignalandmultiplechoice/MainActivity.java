@@ -22,11 +22,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.goals.listviewsignalandmultiplechoice.affinityActivity.FirstActivity;
+import com.example.goals.listviewsignalandmultiplechoice.rxBus.EventRxBus;
+import com.example.goals.listviewsignalandmultiplechoice.rxBus.RxBus;
 import com.example.goals.listviewsignalandmultiplechoice.util.GetPostUtil;
 
 import de.greenrobot.event.EventBus;
 import de.greenrobot.event.Subscribe;
 import de.greenrobot.event.ThreadMode;
+import rx.functions.Action1;
 
 public class MainActivity extends BaseActivity {
 
@@ -76,6 +79,8 @@ public class MainActivity extends BaseActivity {
             }
         });
         tvEventBus = (TextView) findViewById(R.id.tvEventBus);
+        //提示信息
+        tvEventBus.setText("EventBus消息从FinishAffinity测试中来");
     }
 
     private void initURLTestButton() {
@@ -217,10 +222,44 @@ public class MainActivity extends BaseActivity {
      * 订阅eventBus事件
      * 用一个详细的类型来区分事件，否则是string类型的消息不能区分，只能一一去匹配
      * 建议定义的类型：{eventCode：XXX，message：XXX}
+     *
      * @param message
      */
     @Subscribe(threadMode = ThreadMode.MainThread)
-    public void helloEventBus(String message){
+    public void helloEventBus(String message) {
         tvEventBus.setText(message);
+    }
+
+    public void rxBus(View view) {
+        startActivity(new Intent(this, RxBusTestActivity.class));
+
+        //注册接收RxBusEvent
+        receiverRxBusEvent();
+    }
+
+    /**
+     * 注册接收RxBusEvent
+     */
+    private void receiverRxBusEvent() {
+        RxBus.getDefault().toObservable().subscribe(new Action1<Object>() {
+            @Override
+            public void call(Object event) {
+                if (event instanceof EventRxBus) {
+                    //do something
+                    tvEventBus.setText("RxBusEvent,Code:"+((EventRxBus) event).getEventCode()+",Msg:"+((EventRxBus) event).getEventMsg());
+                }/*else if(event instanceof otherEvent){
+                    //do otherthing
+                }*/
+            }
+        });
+    }
+
+
+    /**
+     * 四种通知页面更新的页面中去
+     * @param view
+     */
+    public void gotoNotifyLayoutChange(View view) {
+        startActivity(new Intent(this,NotifyPageChangeActivity.class));
     }
 }

@@ -4,77 +4,107 @@
               android:id="@+id/activity_main"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:orientation="vertical"
               tools:context="com.example.goals.listviewsignalandmultiplechoice.MainActivity">
 
-    <View
-        android:id="@+id/popupWinParent"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="0.5dp"/>
+        android:layout_height="wrap_content">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="signalChoice"
-        android:text="listView单选"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btnListMultipleChoice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="multipleChoice"
-        android:text="listView多选"/>
+            <View
+                android:id="@+id/popupWinParent"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"/>
 
-    <Button
-        android:id="@+id/btnGoogleCards"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="googleCardsView"
-        android:text="Google Cards View"
-        android:transitionName="shareNames"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="signalChoice"
+                android:text="listView单选"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="topPopupWin"
-        android:text="顶部弹出框"/>
+            <Button
+                android:id="@+id/btnListMultipleChoice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="multipleChoice"
+                android:text="listView多选"/>
 
-    <ImageView
-        android:id="@+id/ivAdd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:src="@mipmap/iv_add"/>
+            <Button
+                android:id="@+id/btnGoogleCards"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="googleCardsView"
+                android:text="Google Cards View"
+                android:transitionName="shareNames"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="gotoFrameLayout"
-        android:text="frameLayout测试双层布局点击效果的影响"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="topPopupWin"
+                android:text="顶部弹出框"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="finishAffinityTest"
-        android:text="finishAffinity测试"/>
+            <ImageView
+                android:id="@+id/ivAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:src="@mipmap/iv_add"/>
 
-    <Button
-        android:id="@+id/get"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/activity_vertical_margin_small_8dp"
-        android:background="#00ffff"
-        android:text="get"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="gotoFrameLayout"
+                android:text="frameLayout测试双层布局点击效果的影响"/>
 
-    <Button
-        android:id="@+id/post"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#00ffff"
-        android:text="post"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="finishAffinityTest"
+                android:text="finishAffinity测试"/>
 
-    <TextView
-        android:id="@+id/tvEventBus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+            <Button
+                android:id="@+id/get"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin_small_8dp"
+                android:background="#00ffff"
+                android:text="get"/>
+
+            <Button
+                android:id="@+id/post"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00ffff"
+                android:text="post"/>
+
+            <TextView
+                android:id="@+id/tvEventBus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/btnRxBus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="rxBus"
+                android:text="rxBus"/>
+
+            <Button
+                android:id="@+id/notifyLayoutChange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="gotoNotifyLayoutChange"
+                android:text="页面通知更新的四种方法"/>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
 </LinearLayout>
