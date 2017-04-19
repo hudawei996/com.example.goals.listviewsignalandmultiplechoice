@@ -263,7 +263,19 @@ public class MainActivity extends BaseActivity {
         startActivity(new Intent(this,NotifyPageChangeActivity.class));
     }
 
+    /**
+     * 跳转到输入框特效
+     * @param view
+     */
     public void gotoMagicEditText(View view) {
         startActivity(new Intent(this,EditTextMagicEffect.class));
+    }
+
+    /**
+     * 跳转到viewpager特效
+     * @param view
+     */
+    public void gotoViewPagerEffect(View view) {
+        startActivity(new Intent(this,ViewPagerEffectActivity.class));
     }
 }

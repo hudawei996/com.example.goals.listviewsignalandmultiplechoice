@@ -81,6 +81,8 @@
         </activity>
         <activity android:name=".EditTextMagicEffect">
         </activity>
+        <activity android:name=".ViewPagerEffectActivity">
+        </activity>
     </application>
 
 </manifest>
