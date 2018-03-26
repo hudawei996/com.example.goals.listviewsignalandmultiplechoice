@@ -1,4 +1,4 @@
-package com.example.goals.listviewsignalandmultiplechoice;
+package com.example.goals.listviewsignalandmultiplechoice.activity;
 
 import android.os.Build;
 import android.support.annotation.RequiresApi;
@@ -14,10 +14,11 @@ import android.view.Window;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.BaseAdapter;
-import android.widget.CheckedTextView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import com.example.goals.listviewsignalandmultiplechoice.R;
 
 import java.util.HashMap;
 

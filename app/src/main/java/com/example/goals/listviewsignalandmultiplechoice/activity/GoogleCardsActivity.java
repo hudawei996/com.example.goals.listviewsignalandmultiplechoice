@@ -1,4 +1,4 @@
-package com.example.goals.listviewsignalandmultiplechoice;
+package com.example.goals.listviewsignalandmultiplechoice.activity;
 
 import android.content.res.Resources;
 import android.support.annotation.NonNull;
@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
+import com.example.goals.listviewsignalandmultiplechoice.R;
 import com.example.goals.listviewsignalandmultiplechoice.adapter.GoogleCardsAdapter;
 import com.example.goals.listviewsignalandmultiplechoice.util.DummyContent;
 import com.nhaarman.listviewanimations.appearance.simple.SwingBottomInAnimationAdapter;

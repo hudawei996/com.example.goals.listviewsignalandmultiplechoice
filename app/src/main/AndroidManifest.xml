@@ -42,7 +42,8 @@
         -->
 
         <activity
-            android:name=".MainActivity"
+            android:name=".activity.MainActivity"
+            android:clearTaskOnLaunch="true"
             android:taskAffinity=".affinityActivity.ThirdActivity"
             android:theme="@style/AppTheme">
             <intent-filter>
@@ -59,29 +60,50 @@
                 <category android:name="android.intent.category.BROWSABLE"/>
 
                 <data
-                    android:host="jap.alibaba.com"
-                    android:scheme="jap"/>
+                    android:host="my.com"
+                    android:scheme="m"/>
             </intent-filter>
         </activity>
         <activity
-            android:name=".SignalChoiceActivity"
+            android:name=".activity.SignalChoiceActivity"
             android:theme="@style/AppTheme1"/>
-        <activity android:name=".MultipleChoiceActivity"/>
-        <activity android:name=".GoogleCardsActivity"/>
-        <activity android:name=".FrameLayoutActivity"/>
+        <activity android:name=".activity.MultipleChoiceActivity"/>
+        <activity android:name=".activity.GoogleCardsActivity"/>
+        <activity android:name=".activity.FrameLayoutActivity"/>
         <activity android:name=".affinityActivity.FirstActivity">
         </activity>
         <activity android:name=".affinityActivity.SecondActivity">
         </activity>
         <activity android:name=".affinityActivity.ThirdActivity">
         </activity>
-        <activity android:name=".RxBusTestActivity">
+        <activity android:name=".activity.RxBusTestActivity">
         </activity>
-        <activity android:name=".NotifyPageChangeActivity">
+        <activity android:name=".activity.NotifyPageChangeActivity">
         </activity>
         <activity android:name=".EditTextMagicEffect">
         </activity>
-        <activity android:name=".ViewPagerEffectActivity">
+        <activity
+            android:name=".activity.ViewPagerEffectActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity
+            android:name=".activity.ViewPagerEffect2Activity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity
+            android:name=".activity.PaletteDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.ActivityLuanchStudy">
+        </activity>
+        <activity android:name=".activity.ActivityA">
+        </activity>
+        <activity
+            android:name=".activity.ActivityB"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name=".activity.ToolbarLearnActivity">
+        </activity>
+        <activity android:name=".SplashActivity">
+        </activity>
+        <activity android:name=".hotfixTest.HotFixActivity">
         </activity>
     </application>
 

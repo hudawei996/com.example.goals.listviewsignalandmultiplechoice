@@ -15,3 +15,8 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+
+#android-javascript 解释器
+-keep class org.mozilla.javascript.** { *; }
+#忽略错误提示
+-dontwarn org.mozilla.javascript.**

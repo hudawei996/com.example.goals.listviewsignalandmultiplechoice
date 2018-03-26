@@ -1,4 +1,4 @@
-package com.example.goals.listviewsignalandmultiplechoice;
+package com.example.goals.listviewsignalandmultiplechoice.activity;
 
 import android.os.AsyncTask;
 import android.os.Handler;
@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
+import com.example.goals.listviewsignalandmultiplechoice.R;
 
 /**
  * android进行异步更新UI的四种方式

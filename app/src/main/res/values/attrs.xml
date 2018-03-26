@@ -3,4 +3,11 @@
     <declare-styleable name="ScaledLinearLayout">
         <attr name="linear_layout_ratio" format="float" />
     </declare-styleable>
+
+
+        <declare-styleable name="TwoConnerRoundImageView">
+            <attr name="width" format="dimension"></attr>
+            <attr name="height" format="dimension"></attr>
+            <attr name="radus" format="dimension"></attr>
+        </declare-styleable>
 </resources>

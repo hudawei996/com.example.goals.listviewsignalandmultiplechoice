@@ -1,15 +1,12 @@
-package com.example.goals.listviewsignalandmultiplechoice;
+package com.example.goals.listviewsignalandmultiplechoice.activity;
 
 import android.app.ActivityOptions;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
-import android.support.design.widget.BottomNavigationView;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,7 +18,10 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.goals.listviewsignalandmultiplechoice.EditTextMagicEffect;
+import com.example.goals.listviewsignalandmultiplechoice.R;
 import com.example.goals.listviewsignalandmultiplechoice.affinityActivity.FirstActivity;
+import com.example.goals.listviewsignalandmultiplechoice.hotfixTest.HotFixActivity;
 import com.example.goals.listviewsignalandmultiplechoice.rxBus.EventRxBus;
 import com.example.goals.listviewsignalandmultiplechoice.rxBus.RxBus;
 import com.example.goals.listviewsignalandmultiplechoice.util.GetPostUtil;
@@ -119,21 +119,25 @@ public class MainActivity extends BaseActivity {
 
     /**
      * 获得从URL过来的参数
+     *
+     * 测试打开连接地址，https://huyongqiang.github.io/testHtmlOpenApp.html
      */
     private void getURLData() {
         Intent intent = getIntent();
         Uri uri = intent.getData();
         if (uri != null) {
-            String articleId = "Artical ID =" + uri.getQueryParameter("article");
+            String arg0 = "arg0 =" + uri.getQueryParameter("arg0");
+            String arg1 = "arg1 =" + uri.getQueryParameter("arg1");
             /*另外还有以下几个API来获取相关信息：
             getIntent().getScheme(); //获得Scheme名称
             getIntent().getDataString(); //获得Uri全部路径
             getIntent().getHost(); //获得host
             */
-            Toast.makeText(this, "URL传递过来的参数是" + articleId, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "URL传递过来的参数是" + arg0 + "," + arg1, Toast.LENGTH_SHORT).show();
         }
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public void signalChoice(View view) {
 //        startActivity(new Intent(this, SignalChoiceActivity.class));
 
@@ -246,7 +250,8 @@ public class MainActivity extends BaseActivity {
             public void call(Object event) {
                 if (event instanceof EventRxBus) {
                     //do something
-                    tvEventBus.setText("RxBusEvent,Code:"+((EventRxBus) event).getEventCode()+",Msg:"+((EventRxBus) event).getEventMsg());
+                    tvEventBus.setText("RxBusEvent,Code:" + ((EventRxBus) event).getEventCode() + ",Msg:" + ((EventRxBus) event)
+                            .getEventMsg());
                 }/*else if(event instanceof otherEvent){
                     //do otherthing
                 }*/
@@ -257,25 +262,55 @@ public class MainActivity extends BaseActivity {
 
     /**
      * 四种通知页面更新的页面中去
+     *
      * @param view
      */
     public void gotoNotifyLayoutChange(View view) {
-        startActivity(new Intent(this,NotifyPageChangeActivity.class));
+        startActivity(new Intent(this, NotifyPageChangeActivity.class));
     }
 
     /**
      * 跳转到输入框特效
+     *
      * @param view
      */
     public void gotoMagicEditText(View view) {
-        startActivity(new Intent(this,EditTextMagicEffect.class));
+        startActivity(new Intent(this, EditTextMagicEffect.class));
     }
 
     /**
      * 跳转到viewpager特效
+     *
      * @param view
      */
     public void gotoViewPagerEffect(View view) {
-        startActivity(new Intent(this,ViewPagerEffectActivity.class));
+        startActivity(new Intent(this, ViewPagerEffectActivity.class));
     }
+
+    /**
+     * 跳转到viewpager特效2
+     *
+     * @param view
+     */
+    public void gotoViewPagerEffect2(View view) {
+        startActivity(new Intent(this, ViewPagerEffect2Activity.class));
+    }
+
+    /**
+     * 跳转到viewpager特效2
+     *
+     * @param view
+     */
+    public void gotoActivityLuanch(View view) {
+        startActivity(new Intent(this, ActivityLuanchStudy.class));
+    }
+
+    public void gotoToolBarLearn(View view) {
+        startActivity(new Intent(this, ToolbarLearnActivity.class));
+    }
+
+    public void gotoHotFix(View view) {
+        startActivity(new Intent(this, HotFixActivity.class));
+    }
+
 }
