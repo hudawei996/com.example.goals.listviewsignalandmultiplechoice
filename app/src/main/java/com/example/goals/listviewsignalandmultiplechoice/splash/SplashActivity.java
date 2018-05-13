@@ -1,14 +1,15 @@
-package com.example.goals.listviewsignalandmultiplechoice;
+package com.example.goals.listviewsignalandmultiplechoice.splash;
 
+import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.example.goals.listviewsignalandmultiplechoice.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -30,6 +31,7 @@ public class SplashActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
         splashActivity = this;
 //        hideStatusBar();
+        getSupportActionBar().hide();
         ButterKnife.bind(this);
         iv_default.setBackgroundResource(R.mipmap.p_login_bg);
         Glide.with(SplashActivity.this).load(imgUrl)

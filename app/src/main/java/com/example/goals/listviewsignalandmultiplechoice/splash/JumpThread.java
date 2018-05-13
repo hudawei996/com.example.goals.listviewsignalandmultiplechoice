@@ -1,4 +1,4 @@
-package com.example.goals.listviewsignalandmultiplechoice;
+package com.example.goals.listviewsignalandmultiplechoice.splash;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -6,6 +6,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.widget.TextView;
 
+import com.example.goals.listviewsignalandmultiplechoice.R;
 import com.example.goals.listviewsignalandmultiplechoice.activity.MainActivity;
 
 /**

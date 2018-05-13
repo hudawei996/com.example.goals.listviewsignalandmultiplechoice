@@ -46,11 +46,11 @@
             android:clearTaskOnLaunch="true"
             android:taskAffinity=".affinityActivity.ThirdActivity"
             android:theme="@style/AppTheme">
-            <intent-filter>
+            <!--<intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
+            </intent-filter>-->
 
             <!-- 用于过滤浏览器过来的消息，用浏览器打开APP -->
             <intent-filter>
@@ -62,6 +62,10 @@
                 <data
                     android:host="my.com"
                     android:scheme="m"/>
+
+                <data
+                    android:host="jap.alibaba.com"
+                    android:scheme="jap"/>
             </intent-filter>
         </activity>
         <activity
@@ -101,10 +105,18 @@
         </activity>
         <activity android:name=".activity.ToolbarLearnActivity">
         </activity>
-        <activity android:name=".SplashActivity">
+        <activity android:name=".splash.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
         </activity>
-        <activity android:name=".hotfixTest.HotFixActivity">
-        </activity>
+        <activity android:name=".hotfixTest.HotFixActivity"/>
+        <activity android:name=".activity.StatusButtonActivity"/>
+
+        <activity android:name=".crash.CrashTestActivity"/>
+        <service android:name=".crash.DroidService" android:process=":service"/>
     </application>
 
 </manifest>

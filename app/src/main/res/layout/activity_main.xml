@@ -141,6 +141,18 @@
                 android:onClick="gotoHotFix"
                 android:text="javaScript热更新测试"/>
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="gotoStatusButton"
+                android:text="监听状态的button"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="gotoTestCrash"
+                android:text="测试crash"/>
+
 
         </LinearLayout>
 

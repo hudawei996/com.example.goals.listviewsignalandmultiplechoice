@@ -21,6 +21,7 @@ import android.widget.Toast;
 import com.example.goals.listviewsignalandmultiplechoice.EditTextMagicEffect;
 import com.example.goals.listviewsignalandmultiplechoice.R;
 import com.example.goals.listviewsignalandmultiplechoice.affinityActivity.FirstActivity;
+import com.example.goals.listviewsignalandmultiplechoice.crash.CrashTestActivity;
 import com.example.goals.listviewsignalandmultiplechoice.hotfixTest.HotFixActivity;
 import com.example.goals.listviewsignalandmultiplechoice.rxBus.EventRxBus;
 import com.example.goals.listviewsignalandmultiplechoice.rxBus.RxBus;
@@ -313,4 +314,11 @@ public class MainActivity extends BaseActivity {
         startActivity(new Intent(this, HotFixActivity.class));
     }
 
+    public void gotoStatusButton(View view) {
+        startActivity(new Intent(this, StatusButtonActivity.class));
+    }
+
+    public void gotoTestCrash(View view) {
+        startActivity(new Intent(this, CrashTestActivity.class));
+    }
 }
