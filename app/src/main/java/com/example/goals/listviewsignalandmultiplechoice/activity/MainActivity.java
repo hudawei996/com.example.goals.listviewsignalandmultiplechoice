@@ -6,6 +6,12 @@ import android.net.Uri;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.os.Bundle;
+import android.text.Html;
+import android.text.Layout;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.style.AlignmentSpan;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,6 +47,7 @@ public class MainActivity extends BaseActivity {
     private ImageView imageView;
     private Button get, post;
     private TextView tvEventBus;
+    private TextView mTextView;
 
 
     private String response;
@@ -82,6 +89,37 @@ public class MainActivity extends BaseActivity {
         tvEventBus = (TextView) findViewById(R.id.tvEventBus);
         //提示信息
         tvEventBus.setText("EventBus消息从FinishAffinity测试中来");
+        mTextView = findViewById(R.id.text_view);
+        setHtmlText(mTextView);
+    }
+
+    private void setHtmlText(TextView textView) {
+        /*<p style="text-align:left">居左</p>
+<p style="text-align:right">居右</p>
+<p style="text-align:center">剧中</p>*/
+
+        String htmlText = "<p style=\"text-align:left\">居左</p>\n" +
+                "<p style=\"text-align:left\">居右</p>\n" +
+                "<p style=\"text-align:center\">剧中</p>";
+
+        String htmlText1 = "<html>\n" +
+                "<body>\n" +
+                "\n" +
+                "<p style=\"background:#F00\"; align=\"right\">This is some text in a paragraph.</p>\n" +
+                "\n" +
+                "</body>\n" +
+                "</html>";
+
+        String LeftText = "居左";
+        String RightText = "居右";
+        final String resultText = LeftText + "  " + RightText;
+        final SpannableString styledResultText = new SpannableString(resultText);
+        styledResultText.setSpan((
+                        new AlignmentSpan.Standard(Layout.Alignment.ALIGN_OPPOSITE)),
+                LeftText.length() + 2,
+                LeftText.length() + 2 + RightText.length(),
+                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        mTextView.setText(styledResultText);
     }
 
     private void initURLTestButton() {
@@ -120,7 +158,7 @@ public class MainActivity extends BaseActivity {
 
     /**
      * 获得从URL过来的参数
-     *
+     * <p>
      * 测试打开连接地址，https://huyongqiang.github.io/testHtmlOpenApp.html
      */
     private void getURLData() {

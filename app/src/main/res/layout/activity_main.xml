@@ -153,6 +153,28 @@
                 android:onClick="gotoTestCrash"
                 android:text="测试crash"/>
 
+            <TextView
+                android:id="@+id/text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.example.goals.listviewsignalandmultiplechoice.radioButton.RadioButtonMy
+                    android:layout_width="wrap_content"
+                    android:button="@null"
+                    android:layout_height="wrap_content"/>
+
+                <com.example.goals.listviewsignalandmultiplechoice.radioButton.RadioButtonMy
+                    android:layout_width="wrap_content"
+                    android:button="@null"
+                    android:layout_height="wrap_content"/>
+
+            </RadioGroup>
+
 
         </LinearLayout>
 
