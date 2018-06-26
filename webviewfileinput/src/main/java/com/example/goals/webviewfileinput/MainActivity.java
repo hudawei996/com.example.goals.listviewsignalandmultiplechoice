@@ -7,12 +7,13 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
+import android.util.Log;
 import android.webkit.ValueCallback;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 
 public class MainActivity extends AppCompatActivity {
-
     /**
      * Android 5.0以下版本的文件选择回调
      */
@@ -24,10 +25,11 @@ public class MainActivity extends AppCompatActivity {
 
     protected static final int REQUEST_CODE_FILE_PICKER = 51426;
 
-
-    protected String mUploadableFileTypes = "image/*";
+    //protected String mUploadableFileTypes = "image/*";
+    protected String mUploadableFileTypes = "*/*";
 
     private WebView mWebView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
         mWebView.loadUrl("file:///android_asset/index.html");
         mWebView.setWebChromeClient(new OpenFileChromeClient());
+        mWebView.setWebContentsDebuggingEnabled(true);
     }
 
     private class OpenFileChromeClient extends WebChromeClient {
@@ -60,7 +63,8 @@ public class MainActivity extends AppCompatActivity {
         // Android 4.1 (API level 16) -- Android 4.3 (API level 18)版本选择文件时会触发，该方法为隐藏方法
         @SuppressWarnings("unused")
         public void openFileChooser(ValueCallback<Uri> uploadMsg, String acceptType, String capture) {
-            openFileInput(uploadMsg, null, false);
+//            openFileInput(uploadMsg, null, false);
+            openFileInput(uploadMsg, null, true);
         }
 
         // Android 5.0 (API level 21)以上版本会触发该方法，该方法为公开方法
@@ -70,16 +74,14 @@ public class MainActivity extends AppCompatActivity {
             if (Build.VERSION.SDK_INT >= 21) {
                 final boolean allowMultiple = fileChooserParams.getMode() == FileChooserParams.MODE_OPEN_MULTIPLE;//是否支持多选
 
-
-                openFileInput(null, filePathCallback, allowMultiple);
+//                openFileInput(null, filePathCallback, allowMultiple);
+                openFileInput(null, filePathCallback, true);
 
                 return true;
             } else {
                 return false;
             }
         }
-
-
     }
 
     @SuppressLint("NewApi")
