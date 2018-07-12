@@ -1,1 +1,1 @@
-include ':app', ':webviewfileinput'
+include ':app', ':webviewfileinput', ':cameraselfdefine'
