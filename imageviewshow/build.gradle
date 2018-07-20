@@ -6,8 +6,8 @@ android {
 
 
     defaultConfig {
-        applicationId "com.example.goals.cameraselfdefine"
-        minSdkVersion 21
+        applicationId "com.example.goals.imageviewshow"
+        minSdkVersion 22
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
@@ -18,13 +18,8 @@ android {
 
     buildTypes {
         release {
-            postprocessing {
-                removeUnusedCode false
-                removeUnusedResources false
-                obfuscate false
-                optimizeCode false
-                proguardFile 'proguard-rules.pro'
-            }
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
 
@@ -33,13 +28,8 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
+    implementation 'com.android.support:appcompat-v7:26.1.0'
     testImplementation 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:26.1.0'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-
-    compile 'com.tbruyelle.rxpermissions:rxpermissions:0.9.4@aar'
-
-    compile "io.reactivex:rxandroid:1.2.1"
-    compile "io.reactivex:rxjava:1.1.8"
 }

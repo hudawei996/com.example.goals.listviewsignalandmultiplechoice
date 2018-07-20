@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/ListViewSignalAndMultipleChoice.iml" filepath="$PROJECT_DIR$/ListViewSignalAndMultipleChoice.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/cameraselfdefine/cameraselfdefine.iml" filepath="$PROJECT_DIR$/cameraselfdefine/cameraselfdefine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/imageviewshow/imageviewshow.iml" filepath="$PROJECT_DIR$/imageviewshow/imageviewshow.iml" />
       <module fileurl="file://$PROJECT_DIR$/webviewfileinput/webviewfileinput.iml" filepath="$PROJECT_DIR$/webviewfileinput/webviewfileinput.iml" />
     </modules>
   </component>

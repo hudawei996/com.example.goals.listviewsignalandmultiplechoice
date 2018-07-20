@@ -22,7 +22,7 @@ public class RadioButtonMy extends android.support.v7.widget.AppCompatRadioButto
     }
 
     private void initView(Context context) {
-        View view = LayoutInflater.from(context).inflate(R.layout.radio_button_my, this);
+        View view = LayoutInflater.from(context).inflate(R.layout.radio_button_my, null);
     }
 
     public RadioButtonMy(Context context, AttributeSet attrs) {
