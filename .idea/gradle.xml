@@ -11,7 +11,10 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/cameraselfdefine" />
             <option value="$PROJECT_DIR$/imageviewshow" />
+            <option value="$PROJECT_DIR$/inspector" />
+            <option value="$PROJECT_DIR$/javascriptdroidtest" />
             <option value="$PROJECT_DIR$/webviewfileinput" />
+            <option value="$PROJECT_DIR$/weextest" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

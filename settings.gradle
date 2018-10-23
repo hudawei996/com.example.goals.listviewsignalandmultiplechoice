@@ -1,1 +1,2 @@
-include ':app', ':webviewfileinput', ':cameraselfdefine', ':imageviewshow'
+include ':app', ':webviewfileinput', ':cameraselfdefine', ':imageviewshow', ':javascriptdroidtest', ':weextest'
+include ":inspector"

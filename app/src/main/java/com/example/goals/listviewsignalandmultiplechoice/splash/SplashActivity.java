@@ -34,11 +34,11 @@ public class SplashActivity extends AppCompatActivity {
         getSupportActionBar().hide();
         ButterKnife.bind(this);
         iv_default.setBackgroundResource(R.mipmap.p_login_bg);
-        Glide.with(SplashActivity.this).load(imgUrl)
+        /*Glide.with(SplashActivity.this).load(imgUrl)
                 .centerCrop()
                 .placeholder(R.mipmap.p_login_bg)
                 .error(R.mipmap.p_login_bg)
-                .into(iv_picture);
+                .into(iv_picture);*/
 
         new Handler().postDelayed(new Runnable() {
             @Override
