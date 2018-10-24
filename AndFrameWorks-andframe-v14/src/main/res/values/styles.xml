@@ -1,0 +1,574 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppThemeBase" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorBlue</item>
+        <item name="android:textColorHint">@color/gray_light</item>
+        <item name="android:windowBackground">@color/colorBackgroundDark</item>
+    </style>
+
+    <style name="AppTheme" parent="AppThemeBase">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="AndFrame">
+    </style>
+
+    <style name="AndFrame.Weight1">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="AndFrame.Weight1.Wrap">
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="AndFrame.Weight1.Match">
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="AndFrame.Weight2">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">2</item>
+    </style>
+
+    <style name="AndFrame.Weight2.Wrap">
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="AndFrame.Weight2.Match">
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="AndFrame.Weight3">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">3</item>
+    </style>
+
+    <style name="AndFrame.Weight3.Wrap">
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="AndFrame.Weight3.Match">
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="AndFrame.Match">
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="AndFrame.Match.Wrap">
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="AndFrame.Match.Match">
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="AndFrame.Match.Weight1">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">0dp</item>
+    </style>
+
+    <style name="AndFrame.Match.Weight2">
+        <item name="android:layout_weight">2</item>
+        <item name="android:layout_height">0dp</item>
+    </style>
+
+    <style name="AndFrame.Match.Weight3">
+        <item name="android:layout_weight">3</item>
+        <item name="android:layout_height">0dp</item>
+    </style>
+
+    <style name="AndFrame.Wrap">
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="AndFrame.Wrap.Wrap">
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="AndFrame.Wrap.Match">
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="AndFrame.Division">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dimenDivisionLine</item>
+        <item name="android:background">@color/colorDivision</item>
+        <item name="android:divider">@color/colorDivision</item>
+        <item name="android:dividerHeight">@dimen/dimenDivisionLine</item>
+    </style>
+
+    <style name="AndFrame.Division.Middle">
+        <item name="android:layout_marginLeft">@dimen/dimenPaddingCommon</item>
+    </style>
+    
+    <style name="AndFrame.Division.Margin">
+        <item name="android:layout_marginLeft">@dimen/dimenPaddingCommon</item>
+        <item name="android:layout_marginRight">@dimen/dimenPaddingCommon</item>
+    </style>
+
+    <style name="AndFrame.Division.Dash">
+        <item name="android:layout_height">2dp</item>
+        <item name="android:dividerHeight">2dp</item>
+        <item name="android:background">@drawable/af_division_dash</item>
+        <item name="android:divider">@drawable/af_division_dash</item>
+        <item name="android:layerType">software</item>
+    </style>
+
+    <style name="AndFrame.Division.Vertical">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">@dimen/dimenDivisionLine</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:background">@color/colorDivision</item>
+    </style>
+
+    <style name="AndFrame.Division.Vertical.Dash">
+        <item name="android:layout_width">2dp</item>
+        <item name="android:background">@drawable/af_division_dash_vertical</item>
+        <item name="android:layerType">software</item>
+    </style>
+
+    <style name="AndFrame.Label" parent="AndFrame.Wrap.Wrap">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">@dimen/dimenTextContent</item>
+        <item name="android:textColor">@color/colorTextContent</item>
+    </style>
+
+    <style name="AndFrame.Label.Layout">
+        <item name="android:paddingTop">@dimen/dimenPaddingVertical</item>
+        <item name="android:paddingBottom">@dimen/dimenPaddingVertical</item>
+        <item name="android:paddingLeft">@dimen/dimenPaddingHorizontal</item>
+        <item name="android:paddingRight">@dimen/dimenPaddingHorizontal</item>
+    </style>
+
+    <style name="AndFrame.Label.Layout.Small">
+        <item name="android:paddingTop">@dimen/dimenPaddingDiminutive</item>
+        <item name="android:paddingBottom">@dimen/dimenPaddingDiminutive</item>
+        <item name="android:paddingLeft">@dimen/dimenPaddingCommon</item>
+        <item name="android:paddingRight">@dimen/dimenPaddingCommon</item>
+    </style>
+
+    <style name="AndFrame.Label.Layout.Min">
+        <item name="android:paddingTop">@dimen/dimenPaddingMin</item>
+        <item name="android:paddingBottom">@dimen/dimenPaddingMin</item>
+        <item name="android:paddingLeft">@dimen/dimenPaddingDiminutive</item>
+        <item name="android:paddingRight">@dimen/dimenPaddingDiminutive</item>
+    </style>
+
+    <style name="AndFrame.Label.Title">
+        <item name="android:textColor">@color/colorTextTitle</item>
+        <item name="android:textSize">@dimen/dimenTextTitle</item>
+    </style>
+
+    <style name="AndFrame.Label.Title.Large">
+        <item name="android:textSize">@dimen/dimenTextTitleLarge</item>
+        <!--<item name="android:textStyle">bold</item>-->
+    </style>
+
+    <style name="AndFrame.Label.Title.Small">
+        <item name="android:textSize">@dimen/dimenTextTitleSmall</item>
+    </style>
+
+    <style name="AndFrame.Label.Small">
+        <item name="android:textSize">@dimen/dimenTextSmall</item>
+    </style>
+
+    <style name="AndFrame.Label.Min">
+        <item name="android:textSize">@dimen/dimenTextMin</item>
+    </style>
+
+    <style name="AndFrame.Label.Description">
+        <item name="android:gravity">top</item>
+        <item name="android:lineSpacingExtra">5dp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/dimenTextContent</item>
+        <item name="android:singleLine">false</item>
+    </style>
+
+    <style name="AndFrame.Label.Assistant">
+        <item name="android:textColor">@color/colorTextAssistant</item>
+    </style>
+
+    <style name="AndFrame.Label.Deepness">
+        <item name="android:textColor">@color/colorTextDeepness</item>
+    </style>
+
+    <style name="AndFrame.Label.Thinness">
+        <item name="android:textColor">@color/colorTextThinness</item>
+    </style>
+
+    <style name="AndFrame.Label.Gray">
+        <item name="android:textColor">@color/colorTextGray</item>
+    </style>
+
+    <style name="AndFrame.Label.Small.Assistant">
+        <item name="android:textColor">@color/colorTextAssistant</item>
+    </style>
+
+    <style name="AndFrame.Label.Small.Deepness">
+        <item name="android:textColor">@color/colorTextDeepness</item>
+    </style>
+
+    <style name="AndFrame.Label.Small.Thinness">
+        <item name="android:textColor">@color/colorTextThinness</item>
+    </style>
+
+    <style name="AndFrame.Label.Small.Gray">
+        <item name="android:textColor">@color/colorTextGray</item>
+    </style>
+
+    <style name="AndFrame.Label.Min.Assistant">
+        <item name="android:textColor">@color/colorTextAssistant</item>
+    </style>
+
+    <style name="AndFrame.Label.Min.Deepness">
+        <item name="android:textColor">@color/colorTextDeepness</item>
+    </style>
+
+    <style name="AndFrame.Label.Min.Thinness">
+        <item name="android:textColor">@color/colorTextThinness</item>
+    </style>
+
+    <style name="AndFrame.Label.Min.Gray">
+        <item name="android:textColor">@color/colorTextGray</item>
+    </style>
+
+    <style name="AndFrame.Button" parent="AndFrame.Wrap.Wrap">
+        <item name="android:layout_marginTop">@dimen/dimenPaddingCommon</item>
+        <item name="android:layout_marginBottom">@dimen/dimenPaddingCommon</item>
+        <item name="android:layout_marginLeft">@dimen/dimenPaddingCommon</item>
+        <item name="android:layout_marginRight">@dimen/dimenPaddingCommon</item>
+        <item name="android:paddingTop">@dimen/dimenPaddingCommon</item>
+        <item name="android:paddingBottom">@dimen/dimenPaddingCommon</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">@dimen/dimenTextButton</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/af_button_primary</item>
+    </style>
+
+    <style name="AndFrame.Button.Gray">
+        <item name="android:background">@drawable/af_button_gray</item>
+    </style>
+
+    <style name="AndFrame.Button.Blue">
+        <item name="android:background">@drawable/af_button_blue</item>
+    </style>
+
+    <style name="AndFrame.Button.Green">
+        <item name="android:background">@drawable/af_button_green</item>
+    </style>
+
+    <style name="AndFrame.Button.Orange">
+        <item name="android:background">@drawable/af_button_orange</item>
+    </style>
+
+    <style name="AndFrame.Button.Red">
+        <item name="android:background">@drawable/af_button_red</item>
+    </style>
+
+    <style name="AndFrame.Button.Purple">
+        <item name="android:background">@drawable/af_button_purple</item>
+    </style>
+
+    <style name="AndFrame.Button.Primary">
+        <item name="android:background">@drawable/af_button_primary</item>
+    </style>
+
+    <style name="AndFrame.Button.Small">
+        <item name="android:layout_marginTop">@dimen/dimenPaddingDiminutive</item>
+        <item name="android:layout_marginBottom">@dimen/dimenPaddingDiminutive</item>
+        <item name="android:layout_marginLeft">@dimen/dimenPaddingDiminutive</item>
+        <item name="android:layout_marginRight">@dimen/dimenPaddingDiminutive</item>
+        <item name="android:paddingTop">@dimen/dimenPaddingDiminutive</item>
+        <item name="android:paddingBottom">@dimen/dimenPaddingDiminutive</item>
+        <item name="android:paddingLeft">@dimen/dimenPaddingCommon</item>
+        <item name="android:paddingRight">@dimen/dimenPaddingCommon</item>
+        <item name="android:textSize">@dimen/dimenTextButtonSmall</item>
+    </style>
+
+    <style name="AndFrame.Button.Small.Gray">
+        <item name="android:background">@drawable/af_button_gray</item>
+    </style>
+
+    <style name="AndFrame.Button.Small.Blue">
+        <item name="android:background">@drawable/af_button_blue</item>
+    </style>
+
+    <style name="AndFrame.Button.Small.Green">
+        <item name="android:background">@drawable/af_button_green</item>
+    </style>
+
+    <style name="AndFrame.Button.Small.Orange">
+        <item name="android:background">@drawable/af_button_orange</item>
+    </style>
+
+    <style name="AndFrame.Button.Small.Red">
+        <item name="android:background">@drawable/af_button_red</item>
+    </style>
+    <style name="AndFrame.Button.Small.Primary">
+        <item name="android:background">@drawable/af_button_primary</item>
+    </style>
+
+    <style name="AndFrame.Button.Min">
+        <item name="android:layout_marginTop">@dimen/dimenPaddingMin</item>
+        <item name="android:layout_marginBottom">@dimen/dimenPaddingMin</item>
+        <item name="android:layout_marginLeft">@dimen/dimenPaddingMin</item>
+        <item name="android:layout_marginRight">@dimen/dimenPaddingMin</item>
+        <item name="android:paddingTop">@dimen/dimenPaddingMin</item>
+        <item name="android:paddingBottom">@dimen/dimenPaddingMin</item>
+        <item name="android:paddingLeft">@dimen/dimenPaddingDiminutive</item>
+        <item name="android:paddingRight">@dimen/dimenPaddingDiminutive</item>
+        <item name="android:textSize">@dimen/dimenTextButtonMin</item>
+    </style>
+
+    <style name="AndFrame.Button.Min.Gray">
+        <item name="android:background">@drawable/af_button_gray</item>
+    </style>
+
+    <style name="AndFrame.Button.Min.Blue">
+        <item name="android:background">@drawable/af_button_blue</item>
+    </style>
+
+    <style name="AndFrame.Button.Min.Green">
+        <item name="android:background">@drawable/af_button_green</item>
+    </style>
+
+    <style name="AndFrame.Button.Min.Orange">
+        <item name="android:background">@drawable/af_button_orange</item>
+    </style>
+
+    <style name="AndFrame.Button.Min.Red">
+        <item name="android:background">@drawable/af_button_red</item>
+    </style>
+    <style name="AndFrame.Button.Min.Primary">
+        <item name="android:background">@drawable/af_button_primary</item>
+    </style>
+
+
+    <style name="AndFrame.Toolbar" parent="AndFrame.Label">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:background">?attr/colorPrimary</item>
+        <item name="android:theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+        <item name="android:textSize">@dimen/dimenTextTitleBar</item>
+        <item name="android:textColor">@color/colorToolbarText</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColorPrimary">@color/colorToolbarText</item>
+        <item name="actionMenuTextColor">@color/colorToolbarText</item>
+    </style>
+
+    <style name="AndFrame.Toolbar.Light">
+        <item name="android:background">@drawable/af_background_toolbar_white</item>
+        <item name="android:theme">@style/ThemeOverlay.AppCompat.ActionBar</item>
+        <item name="android:textColor">@color/colorToolbarTextDark</item>
+    </style>
+
+    <style name="AndFrame.Toolbar.Dark">
+        <item name="android:background">#cc22292c</item>
+        <item name="android:theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+    </style>
+
+    <style name="AndFrame.Toolbar.Title" parent="AndFrame.Label">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textSize">@dimen/dimenTextTitleBar</item>
+        <item name="android:textColor">@color/colorToolbarText</item>
+    </style>
+
+    <style name="AndFrame.Toolbar.Action" parent="AndFrame.Label"
+        tools:ignore="PrivateResource">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_gravity">end</item>
+        <item name="android:textSize">@dimen/dimenTextTitleSmall</item>
+        <item name="android:textColor">@color/colorToolbarText</item>
+        <item name="android:background">?attr/controlBackground</item>
+        <item name="android:paddingTop">@dimen/dimenPaddingDiminutive</item>
+        <item name="android:paddingBottom">@dimen/dimenPaddingDiminutive</item>
+        <item name="android:paddingLeft">@dimen/dimenPaddingHorizontal</item>
+        <item name="android:paddingRight">@dimen/dimenPaddingHorizontal</item>
+    </style>
+
+    <style name="AndFrame.Toolbar.Action.Dark">
+        <item name="android:textColor">@color/colorToolbarTextDark</item>
+    </style>
+
+    <style name="AndFrame.Toolbar.Title.Dark">
+        <item name="android:textColor">@color/colorToolbarTextDark</item>
+    </style>
+
+    <style name="AndFrame.CommonBar" parent="AndFrame.Match.Wrap">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="AndFrame.CommonBar.Panel">
+        <!--<item name="android:paddingTop">@dimen/dimenDivisionLine</item>-->
+        <!--<item name="android:paddingBottom">@dimen/dimenDivisionLine</item>-->
+        <item name="android:layout_marginTop">@dimen/dimenPaddingCommon</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">@drawable/af_background_panel</item>
+    </style>
+
+    <style name="AndFrame.CommonBar.PanelLayout">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingBottom">@dimen/dimenPaddingCommon</item>
+        <item name="android:background">@color/colorBackgroundDark</item>
+    </style>
+
+    <style name="AndFrame.CommonBar.Bar">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingTop">@dimen/dimenPaddingDiminutive</item>
+        <item name="android:paddingBottom">@dimen/dimenPaddingDiminutive</item>
+        <item name="android:paddingLeft">@dimen/dimenPaddingCommon</item>
+        <item name="android:paddingRight">@dimen/dimenPaddingCommon</item>
+        <!--<item name="android:paddingTop">@dimen/dimenPaddingDiminutive</item>-->
+        <!--<item name="android:paddingBottom">@dimen/dimenPaddingDiminutive</item>-->
+
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+        <!--<item name="android:background">@drawable/af_selector_background_white</item>-->
+    </style>
+
+    <style name="AndFrame.CommonBar.Bar.Header">
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:paddingLeft">@dimen/dimenPaddingCommon</item>
+        <item name="android:paddingRight">@dimen/dimenPaddingCommon</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+    </style>
+
+    <style name="AndFrame.CommonBar.Bar.Alone">
+        <item name="android:layout_marginTop">@dimen/dimenPaddingCommon</item>
+        <item name="android:background">@drawable/af_background_panel_bar</item>
+    </style>
+
+    <style name="AndFrame.CommonBar.Content" parent="AndFrame.Label">
+        <!--<item name="android:layout_margin">@dimen/dimenPaddingDiminutive</item>-->
+        <item name="android:gravity">center_vertical</item>
+        <!--<item name="android:paddingTop">2dp</item>-->
+        <!--<item name="android:paddingBottom">2dp</item>-->
+        <!--<item name="android:paddingLeft">@dimen/dimenPaddingDiminutive</item>-->
+        <!--<item name="android:paddingRight">@dimen/dimenPaddingCommon</item>-->
+        <item name="android:paddingTop">@dimen/dimenPaddingCommon</item>
+        <item name="android:paddingBottom">@dimen/dimenPaddingCommon</item>
+        <item name="android:paddingLeft">@dimen/dimenPaddingDiminutive</item>
+        <item name="android:paddingRight">@dimen/dimenPaddingDiminutive</item>
+        <item name="android:drawablePadding">@dimen/dimenPaddingCommon</item>
+    </style>
+
+    <style name="AndFrame.CommonBar.Content.Match">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="AndFrame.CommonBar.Content.Bar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:paddingTop">@dimen/dimenPaddingMiddle</item>
+        <item name="android:paddingBottom">@dimen/dimenPaddingMiddle</item>
+        <item name="android:paddingLeft">@dimen/dimenPaddingHorizontal</item>
+        <item name="android:paddingRight">@dimen/dimenPaddingHorizontal</item>
+        <item name="android:drawableEnd">@drawable/af_arrow_right_primary</item>
+        <item name="android:drawableRight">@drawable/af_arrow_right_primary</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+    </style>
+
+    <style name="AndFrame.CommonBar.Content.Bar.Gray">
+        <item name="android:drawableEnd">@drawable/af_arrow_right_gray</item>
+        <item name="android:drawableRight">@drawable/af_arrow_right_gray</item>
+    </style>
+
+
+    <style name="AndFrame.CommonBar.Content.Value">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="AndFrame.CommonBar.Value" parent="AndFrame.Label">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorTextAssistant</item>
+        <item name="android:gravity">right|end|center_vertical</item>
+        <item name="android:paddingTop">@dimen/dimenPaddingCommon</item>
+        <item name="android:paddingBottom">@dimen/dimenPaddingCommon</item>
+        <item name="android:paddingLeft">@dimen/dimenPaddingHorizontal</item>
+        <item name="android:paddingRight">@dimen/dimenPaddingDiminutive</item>
+        <item name="android:drawablePadding">@dimen/dimenPaddingCommon</item>
+        <!--<item name="android:layout_marginEnd">@dimen/dimenPaddingDiminutive</item>-->
+        <item name="android:layout_gravity">center_vertical|end</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+
+    <style name="AndFrame.CommonBar.Value.Arrow">
+        <item name="android:paddingRight">@dimen/dimenPaddingMin</item>
+        <item name="android:paddingTop">@dimen/dimenPaddingDiminutive</item>
+        <item name="android:paddingBottom">@dimen/dimenPaddingDiminutive</item>
+        <item name="android:drawableRight">@drawable/af_arrow_right_primary</item>
+        <item name="android:drawablePadding">@dimen/dimenPaddingMin</item>
+    </style>
+
+    <style name="AndFrame.CommonBar.Value.Arrow.Gray">
+        <item name="android:drawableRight">@drawable/af_arrow_right_gray</item>
+    </style>
+
+    <style name="AndFrame.Layout" parent="AndFrame.Match.Wrap">
+        <item name="android:paddingTop">@dimen/dimenPaddingVertical</item>
+        <item name="android:paddingBottom">@dimen/dimenPaddingVertical</item>
+        <item name="android:paddingLeft">@dimen/dimenPaddingHorizontal</item>
+        <item name="android:paddingRight">@dimen/dimenPaddingHorizontal</item>
+    </style>
+
+    <style name="AndFrame.Layout.Small" parent="AndFrame.Match.Wrap">
+        <item name="android:paddingTop">@dimen/dimenPaddingDiminutive</item>
+        <item name="android:paddingBottom">@dimen/dimenPaddingDiminutive</item>
+        <item name="android:paddingLeft">@dimen/dimenPaddingCommon</item>
+        <item name="android:paddingRight">@dimen/dimenPaddingCommon</item>
+    </style>
+
+    <style name="AndFrame.Layout.Min" parent="AndFrame.Match.Wrap">
+        <item name="android:paddingTop">@dimen/dimenPaddingMin</item>
+        <item name="android:paddingBottom">@dimen/dimenPaddingMin</item>
+        <item name="android:paddingLeft">@dimen/dimenPaddingDiminutive</item>
+        <item name="android:paddingRight">@dimen/dimenPaddingDiminutive</item>
+    </style>
+
+    <style name="AndFrame.Layout.Clickable">
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+    </style>
+
+    <style name="AndFrame.Layout.Wrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="AndFrame.Layout.Match">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="AndFrame.ArrowRight">
+        <item name="android:layout_width">25dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_marginLeft">@dimen/dimenPaddingDiminutive</item>
+        <!--<item name="android:layout_marginStart">@dimen/dimenPaddingDiminutive</item>-->
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_gravity">end|right|center_vertical</item>
+        <item name="android:background">@drawable/af_arrow_right_primary</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="AndFrame.ArrowRight.Gray">
+        <item name="android:background">@drawable/af_arrow_right_gray</item>
+    </style>
+
+</resources>

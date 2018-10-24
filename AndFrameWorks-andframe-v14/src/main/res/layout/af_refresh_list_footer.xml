@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/refresh_list_footer_lyt"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent">
+    <TextView style="@style/AndFrame.Label.Assistant"
+        android:id="@+id/refresh_list_footer_text"
+        android:layout_centerInParent="true"
+        android:padding="16dip"
+        android:text="@string/refresh_footer_more"/>
+    <ProgressBar style="?android:attr/progressBarStyleSmall"
+        android:id="@+id/refresh_list_footer_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/refresh_list_footer_text"
+        android:layout_toStartOf="@+id/refresh_list_footer_text"
+        android:layout_centerVertical="true"
+        android:visibility="visible"/>
+</RelativeLayout>

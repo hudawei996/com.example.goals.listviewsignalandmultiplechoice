@@ -1,0 +1,21 @@
+package com.andframe.annotation.view.idname;
+
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+
+/**
+ * 注解式绑定控件<br>
+ *  AdapterView.OnItemClickListener
+ *  @ BindItemLongClick$("viewId")
+ *  public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+ *  }
+ */
+@Target(ElementType.METHOD)
+@Retention(RetentionPolicy.RUNTIME)
+public @interface BindItemLongClick$ {
+    String[] value();
+}
+

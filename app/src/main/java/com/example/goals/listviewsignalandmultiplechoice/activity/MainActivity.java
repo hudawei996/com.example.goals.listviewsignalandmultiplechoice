@@ -359,4 +359,8 @@ public class MainActivity extends BaseActivity {
     public void gotoTestCrash(View view) {
         startActivity(new Intent(this, CrashTestActivity.class));
     }
+
+    public void gotoTestMultiThread(View view) {
+        startActivity(new Intent(this, MultiThreadActivity.class));
+    }
 }

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/af_titlebar_select"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#FF005983" >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dip"
+            android:layout_alignParentBottom="true"
+            android:background="#FF0099E5"/>
+        <ImageView style="@style/AndFrame.Toolbar.Action"
+            android:id="@+id/af_titlebar_select_finish"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/af_icon_goback"/>
+        <View style="@style/AndFrame.Division.Vertical"
+            android:layout_width="1dp"
+            android:layout_marginTop="@dimen/dimenPaddingCommon"
+            android:layout_marginBottom="@dimen/dimenPaddingCommon"
+            android:layout_toEndOf="@+id/af_titlebar_select_finish"
+            android:layout_toRightOf="@+id/af_titlebar_select_finish"
+            android:layout_centerVertical="true"
+            android:background="#550099EE"/>
+
+        <ImageView style="@style/AndFrame.Toolbar.Action"
+            android:id="@+id/af_titlebar_select_operate"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/af_icon_menu"/>
+
+        <TextView style="@style/AndFrame.Toolbar.Title"
+            android:id="@+id/af_titlebar_select_text"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/af_titlebar_select_finish"
+            android:layout_toRightOf="@+id/af_titlebar_select_finish"
+            android:layout_toLeftOf="@+id/af_titlebar_select_operate"
+            android:layout_toStartOf="@+id/af_titlebar_select_operate"
+            android:layout_marginLeft="@dimen/dimenPaddingCommon"
+            android:layout_marginRight="@dimen/dimenPaddingCommon"
+            android:text="@string/app_name"  />
+    </RelativeLayout>
+</FrameLayout>
