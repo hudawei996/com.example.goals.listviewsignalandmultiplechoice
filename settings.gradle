@@ -1,2 +1,2 @@
-include ':app', ':webviewfileinput', ':cameraselfdefine', ':imageviewshow', ':javascriptdroidtest', ':weextest', ':AndFrameWorks-andframe-v14'
+include ':app', ':webviewfileinput', ':cameraselfdefine', ':imageviewshow', ':javascriptdroidtest', ':weextest', ':AndFrameWorks-andframe-v14', ':viewinjecthu'
 include ":inspector"

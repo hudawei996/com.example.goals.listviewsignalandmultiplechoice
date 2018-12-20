@@ -29,6 +29,9 @@ import com.example.goals.listviewsignalandmultiplechoice.R;
 import com.example.goals.listviewsignalandmultiplechoice.affinityActivity.FirstActivity;
 import com.example.goals.listviewsignalandmultiplechoice.crash.CrashTestActivity;
 import com.example.goals.listviewsignalandmultiplechoice.hotfixTest.HotFixActivity;
+import com.example.goals.listviewsignalandmultiplechoice.recyclerViewMultiSelect.MultiSelectRVActivity;
+import com.example.goals.listviewsignalandmultiplechoice.recyclerViewMultiSelect.MultiSelectRecyclerViewAdapter;
+import com.example.goals.listviewsignalandmultiplechoice.recyclerViewMultiSelect.RecyclerViewActivity;
 import com.example.goals.listviewsignalandmultiplechoice.rxBus.EventRxBus;
 import com.example.goals.listviewsignalandmultiplechoice.rxBus.RxBus;
 import com.example.goals.listviewsignalandmultiplechoice.util.GetPostUtil;
@@ -362,5 +365,13 @@ public class MainActivity extends BaseActivity {
 
     public void gotoTestMultiThread(View view) {
         startActivity(new Intent(this, MultiThreadActivity.class));
+    }
+
+    public void gotoRecyclerView(View view) {
+        startActivity(new Intent(this, RecyclerViewActivity.class));
+    }
+
+    public void gotoRecyclerView2(View view) {
+        startActivity(new Intent(this, MultiSelectRVActivity.class));
     }
 }

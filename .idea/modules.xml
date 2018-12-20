@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/AndFrameWorks-andframe-v14/AndFrameWorks-andframe-v14.iml" filepath="$PROJECT_DIR$/AndFrameWorks-andframe-v14/AndFrameWorks-andframe-v14.iml" />
       <module fileurl="file://$PROJECT_DIR$/ListViewSignalAndMultipleChoice.iml" filepath="$PROJECT_DIR$/ListViewSignalAndMultipleChoice.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/cameraselfdefine/cameraselfdefine.iml" filepath="$PROJECT_DIR$/cameraselfdefine/cameraselfdefine.iml" />
       <module fileurl="file://$PROJECT_DIR$/imageviewshow/imageviewshow.iml" filepath="$PROJECT_DIR$/imageviewshow/imageviewshow.iml" />
       <module fileurl="file://$PROJECT_DIR$/inspector/inspector.iml" filepath="$PROJECT_DIR$/inspector/inspector.iml" />
       <module fileurl="file://$PROJECT_DIR$/javascriptdroidtest/javascriptdroidtest.iml" filepath="$PROJECT_DIR$/javascriptdroidtest/javascriptdroidtest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/viewinjecthu/viewinjecthu.iml" filepath="$PROJECT_DIR$/viewinjecthu/viewinjecthu.iml" />
       <module fileurl="file://$PROJECT_DIR$/webviewfileinput/webviewfileinput.iml" filepath="$PROJECT_DIR$/webviewfileinput/webviewfileinput.iml" />
       <module fileurl="file://$PROJECT_DIR$/weextest/weextest.iml" filepath="$PROJECT_DIR$/weextest/weextest.iml" />
     </modules>

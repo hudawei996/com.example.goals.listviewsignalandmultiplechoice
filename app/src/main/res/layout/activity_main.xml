@@ -165,13 +165,13 @@
 
                 <com.example.goals.listviewsignalandmultiplechoice.radioButton.RadioButtonMy
                     android:layout_width="wrap_content"
-                    android:button="@null"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:button="@null"/>
 
                 <com.example.goals.listviewsignalandmultiplechoice.radioButton.RadioButtonMy
                     android:layout_width="wrap_content"
-                    android:button="@null"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:button="@null"/>
 
             </RadioGroup>
 
@@ -181,6 +181,60 @@
                 android:onClick="gotoTestMultiThread"
                 android:text="多线程"/>
 
+            <com.example.goals.listviewsignalandmultiplechoice.view.androidHeroesView.ShimmerText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hello world!"/>
+
+            <com.example.goals.listviewsignalandmultiplechoice.view.androidHeroesView.CircleProgressView
+                android:layout_width="72dp"
+                android:layout_height="72dp"/>
+
+            <com.example.goals.listviewsignalandmultiplechoice.view.androidHeroesView.VolumeView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"/>
+
+            <com.example.goals.listviewsignalandmultiplechoice.view.androidHeroesView.MyScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/test1" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/test2" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/test3" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/test4" />
+
+            </com.example.goals.listviewsignalandmultiplechoice.view.androidHeroesView.MyScrollView>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="gotoRecyclerView"
+                android:text="RecyclerView"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="gotoRecyclerView2"
+                android:text="RecyclerView2"/>
 
         </LinearLayout>
 
